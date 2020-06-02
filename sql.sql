@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[tblHoadon](
 	[iId] [int] IDENTITY(1,1) NOT NULL,
 	[sMaban] [int] NULL,
 	[sMaNV] [int] NULL,
-	[dThoigianthanhtoan] [datetime] NULL,
+	[dThoigianthanhtoan] [date] NULL,
 	[sTrangthai] [nvarchar](10) NULL,
 	[fToongtien] [float] NULL,
 PRIMARY KEY CLUSTERED 
@@ -202,3 +202,25 @@ select * from tblHoadon
 select * from tblChitietHD
 select * from tblBan
 insert into tblHoadon (sMaNV, sMaban,dThoigianthanhtoan,sTrangthai,fToongtien) values(,15,GETDATE(),0,0)
+select * from viewtblBill where dThoigianthanhtoan between '2020/06/1' and '2020/06/2'
+
+
+ALTER TABLE tblHoadon
+ALTER COLUMN  dThoigianthanhtoan date;
+
+delete from tblBan where iId = 22
+
+
+ALter PROCEDURE removeTable
+@table_id int
+AS 
+BEGIN 
+delete from tblChitietHD where sMaHD = (select iId from tblHoadon where sMaban = @table_id)
+delete from tblHoadon where sMaban = @table_id
+delete from tblBan where iId = @table_id
+END 
+
+exec removeTable 19
+
+select * from dbo.viewRepostBill where bill_id = 4
+

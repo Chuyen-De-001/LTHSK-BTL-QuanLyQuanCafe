@@ -185,36 +185,49 @@ namespace LTHSK_BTL_QuanLyQuanCafe
         {
             string[] arrayTortal = txt_tortal_payment.Text.Split(' ');
             string id_table  = lab_chooseTable.Text;
-            if (MessageBox.Show("Có muốn in hóa đơn?", "Quesion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            int index = lst_button.FindIndex(a => a.Name == id_table);
+            if (lst_button[index].BackColor == System.Drawing.Color.Yellow)
             {
-                functions.payment_bill(bill_id.ToString(), id_table, arrayTortal[0].Replace(",", ""));
-                MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (MessageBox.Show("Có muốn in hóa đơn?", "Quesion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    /*                functions.payment_bill(bill_id.ToString(), id_table, arrayTortal[0].Replace(",", ""));
+                                    MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                int index = lst_button.FindIndex(a => a.Name == id_table);
-                string[] statustable = lst_button[index].Text.Split('\n');
-                lst_button[index].BackColor = System.Drawing.Color.Green;
-                lst_button[index].Text = statustable[0] + "\n" + "Trống";
+                                    int index = lst_button.FindIndex(a => a.Name == id_table);
+                                    string[] statustable = lst_button[index].Text.Split('\n');
+                                    lst_button[index].BackColor = System.Drawing.Color.Green;
+                                    lst_button[index].Text = statustable[0] + "\n" + "Trống";
 
-                Load_viewBill_Infor(bill_id);
-                lab_chooseTable.Text = "null";
-                //Reports.fReports reports = new Reports.fReports(bill_id.ToString());
-                //reports.Show();
+                                    Reports.fReport fReport = new Reports.fReport(bill_id.ToString());
+                                    fReport.Show();
+
+                                    Load_viewBill_Infor(bill_id);
+                                    lab_chooseTable.Text = "null";*/
+                    //Reports.fReports reports = new Reports.fReports(bill_id.ToString());
+                    //reports.Show();
+                    Reports.fReport fReport = new Reports.fReport(bill_id.ToString());
+                    fReport.Show();
+                }
+                else
+                {
+                    functions.payment_bill(bill_id.ToString(), id_table, arrayTortal[0].Replace(",", ""));
+                    MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //btn_refesh_Click(sender, e);
+
+                    string[] statustable = lst_button[index].Text.Split('\n');
+                    lst_button[index].BackColor = System.Drawing.Color.Green;
+                    lst_button[index].Text = statustable[0] + "\n" + "Trống";
+
+                    Load_viewBill_Infor(bill_id);
+                    lab_chooseTable.Text = "null";
+
+                }
             }
             else
             {
-                functions.payment_bill(bill_id.ToString(), id_table, arrayTortal[0].Replace(",", ""));
-                MessageBox.Show("Thanh toán thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //btn_refesh_Click(sender, e);
-
-                int index = lst_button.FindIndex(a => a.Name == id_table);
-                string[] statustable = lst_button[index].Text.Split('\n');
-                lst_button[index].BackColor = System.Drawing.Color.Green;
-                lst_button[index].Text = statustable[0] + "\n" + "Trống";
-
-                Load_viewBill_Infor(bill_id);
-                lab_chooseTable.Text = "null";
-
+                MessageBox.Show("Bàn vẫn trống, không thể thanh toán.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

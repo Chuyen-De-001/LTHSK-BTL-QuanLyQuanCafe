@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace LTHSK_BTL_QuanLyQuanCafe
         Bus.typeDrinksBus typeDrinksBus = new Bus.typeDrinksBus();
         Bus.DrinksBus drinksBus = new Bus.DrinksBus();
         Bus.TableBus tableBus = new Bus.TableBus();
+        Bus.BillBus billBus = new Bus.BillBus();
         Functions functions = new Functions();
         
        
@@ -32,9 +34,21 @@ namespace LTHSK_BTL_QuanLyQuanCafe
             Load_tabtypeDrink();
             Load_tabMenu();
             Load_tabTable();
+            Load_tbaBill(0);
 
         }
         #region Methoad
+
+        public void Load_tbaBill(int status,string date1=null,string date2=null)
+        {
+            comboBox_thongke_hoadon_tab4.SelectedItem = "Thống kế tất cả hóa đơn";
+            List<Entity.Bill> lst_bill = billBus.searchBill(status,date1,date2);
+            dataGridView_listBill_tab4.DataSource = lst_bill;
+            lab_fTongHD_tab4.Text = billBus.getTortalBill(lst_bill);
+            lab_ftongtien_tab4.Text = billBus.getTortalMoneyBill(lst_bill);
+            DisableTabThongke();
+            Debug.WriteLine(date1);
+        }
         public void Load_tabNhanVien()
         {
             List<Entity.User> tab1_lst = userBus.getListUser();
@@ -87,6 +101,20 @@ namespace LTHSK_BTL_QuanLyQuanCafe
             }
 
             return searchby;
+        }
+        public void DisableTabThongke()
+        {
+            label13.Visible = false;
+            label14.Visible = false;
+            dateTimePicker_thongke_to_tab4.Visible = false;
+            dateTimePicker_thongke_to1_tab4.Visible = false;
+        }
+        public void EnableTabThongke()
+        {
+            label13.Visible = true;
+            label14.Visible = true;
+            dateTimePicker_thongke_to_tab4.Visible = true;
+            dateTimePicker_thongke_to1_tab4.Visible = true;
         }
         #endregion
 
@@ -302,6 +330,49 @@ namespace LTHSK_BTL_QuanLyQuanCafe
         private void dataGridView_listTable_tab3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             id = dataGridView_listTable_tab3.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_thongke_hoadon_tab4_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox_thongke_hoadon_tab4.SelectedItem.ToString() == "Thống kê theo thời gian")
+            {
+                EnableTabThongke();
+
+            }
+            else
+            {
+                DisableTabThongke();
+            }
+        }
+
+        private void btn_thongke_tab4_Click(object sender, EventArgs e)
+        {
+            int status = 0;
+            if (comboBox_thongke_hoadon_tab4.SelectedItem.ToString() == "Thống kê theo thời gian")
+            {
+                status = 1;
+            }
+            else if (comboBox_thongke_hoadon_tab4.SelectedItem.ToString() == "Thống kê ngày hôm nay")
+            {
+                status = 2;
+            }
+            if (status == 1)
+            {
+                if (new Entity.Bill().convertime(dateTimePicker_thongke_to_tab4.Value.ToString()) == new Entity.Bill().convertime(dateTimePicker_thongke_to1_tab4.Value.ToString()))
+                {
+                    MessageBox.Show("Chưa chọn khoảng thời gian", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+            }
+            Load_tbaBill(status, new Entity.Bill().convertime(dateTimePicker_thongke_to_tab4.Value.ToString()), new Entity.Bill().convertime(dateTimePicker_thongke_to1_tab4.Value.ToString()));
+
+            
         }
     }
 }

@@ -48,5 +48,7 @@ namespace LTHSK_BTL_QuanLyQuanCafe.Entity
             string[] tim2 = time.Split('/');
             return tim2[2] + "/" + tim2[0] + "/" + tim2[1];
         }
+
+        
     }
 }

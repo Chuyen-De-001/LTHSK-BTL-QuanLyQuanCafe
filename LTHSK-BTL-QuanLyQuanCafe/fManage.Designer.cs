@@ -94,24 +94,24 @@
             this.btn_them_4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tab_bill = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lab_ftongtien_tab4 = new System.Windows.Forms.Label();
+            this.ftongtien_5đss = new System.Windows.Forms.Label();
+            this.lab_fTongHD_tab4 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dataGridView_listBill_tab4 = new System.Windows.Forms.DataGridView();
             this.btn_thongke_tab4 = new System.Windows.Forms.Button();
             this.comboBox_thongke_hoadon_tab4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker_thongke_to1_tab4 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker_thongke_to_tab4 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView_listBill_tab4 = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
             this.id_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ban_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dTime_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fTong_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lab_ftongtien_tab4 = new System.Windows.Forms.Label();
-            this.ftongtien_5đss = new System.Windows.Forms.Label();
-            this.lab_fTongHD_tab4 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab1_Nhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tab1_dtgirldview_dsNv)).BeginInit();
@@ -140,6 +140,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 450);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tab1_Nhanvien
             // 
@@ -861,145 +862,6 @@
             this.tab_bill.Text = "Hóa đơn";
             this.tab_bill.UseVisualStyleBackColor = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(249, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(243, 32);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Thống kê hóa đơn";
-            // 
-            // btn_thongke_tab4
-            // 
-            this.btn_thongke_tab4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thongke_tab4.ImageIndex = 4;
-            this.btn_thongke_tab4.ImageList = this.imageList1;
-            this.btn_thongke_tab4.Location = new System.Drawing.Point(683, 50);
-            this.btn_thongke_tab4.Name = "btn_thongke_tab4";
-            this.btn_thongke_tab4.Padding = new System.Windows.Forms.Padding(5);
-            this.btn_thongke_tab4.Size = new System.Drawing.Size(101, 35);
-            this.btn_thongke_tab4.TabIndex = 11;
-            this.btn_thongke_tab4.Text = "Thống kê";
-            this.btn_thongke_tab4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_thongke_tab4.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_thongke_hoadon_tab4
-            // 
-            this.comboBox_thongke_hoadon_tab4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_thongke_hoadon_tab4.FormattingEnabled = true;
-            this.comboBox_thongke_hoadon_tab4.Items.AddRange(new object[] {
-            "Thống kê ngày hôm nay",
-            "Thống kê theo thời gian",
-            "Thống kế tất cả hóa đơn"});
-            this.comboBox_thongke_hoadon_tab4.Location = new System.Drawing.Point(4, 56);
-            this.comboBox_thongke_hoadon_tab4.Name = "comboBox_thongke_hoadon_tab4";
-            this.comboBox_thongke_hoadon_tab4.Size = new System.Drawing.Size(247, 24);
-            this.comboBox_thongke_hoadon_tab4.TabIndex = 10;
-            // 
-            // dateTimePicker_thongke_to1_tab4
-            // 
-            this.dateTimePicker_thongke_to1_tab4.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker_thongke_to1_tab4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_thongke_to1_tab4.Location = new System.Drawing.Point(497, 57);
-            this.dateTimePicker_thongke_to1_tab4.Name = "dateTimePicker_thongke_to1_tab4";
-            this.dateTimePicker_thongke_to1_tab4.Size = new System.Drawing.Size(122, 22);
-            this.dateTimePicker_thongke_to1_tab4.TabIndex = 9;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(459, 62);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 17);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "đến";
-            // 
-            // dateTimePicker_thongke_to_tab4
-            // 
-            this.dateTimePicker_thongke_to_tab4.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker_thongke_to_tab4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_thongke_to_tab4.Location = new System.Drawing.Point(331, 57);
-            this.dateTimePicker_thongke_to_tab4.Name = "dateTimePicker_thongke_to_tab4";
-            this.dateTimePicker_thongke_to_tab4.Size = new System.Drawing.Size(122, 22);
-            this.dateTimePicker_thongke_to_tab4.TabIndex = 7;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(300, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 17);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Từ";
-            // 
-            // dataGridView_listBill_tab4
-            // 
-            this.dataGridView_listBill_tab4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_listBill_tab4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_5,
-            this.ban_5,
-            this.ten_5,
-            this.dTime_5,
-            this.status_5,
-            this.fTong_5});
-            this.dataGridView_listBill_tab4.Location = new System.Drawing.Point(4, 108);
-            this.dataGridView_listBill_tab4.Name = "dataGridView_listBill_tab4";
-            this.dataGridView_listBill_tab4.RowHeadersWidth = 51;
-            this.dataGridView_listBill_tab4.RowTemplate.Height = 24;
-            this.dataGridView_listBill_tab4.Size = new System.Drawing.Size(780, 235);
-            this.dataGridView_listBill_tab4.TabIndex = 12;
-            // 
-            // id_5
-            // 
-            this.id_5.DataPropertyName = "id";
-            this.id_5.HeaderText = "Mã";
-            this.id_5.MinimumWidth = 6;
-            this.id_5.Name = "id_5";
-            this.id_5.Width = 125;
-            // 
-            // ban_5
-            // 
-            this.ban_5.DataPropertyName = "table_id";
-            this.ban_5.HeaderText = "Bàn";
-            this.ban_5.MinimumWidth = 6;
-            this.ban_5.Name = "ban_5";
-            this.ban_5.Width = 70;
-            // 
-            // ten_5
-            // 
-            this.ten_5.DataPropertyName = "user_id";
-            this.ten_5.HeaderText = "Nhân viên lập HĐ";
-            this.ten_5.MinimumWidth = 6;
-            this.ten_5.Name = "ten_5";
-            this.ten_5.Width = 125;
-            // 
-            // dTime_5
-            // 
-            this.dTime_5.DataPropertyName = "dTime";
-            this.dTime_5.HeaderText = "Ngày lập HĐ";
-            this.dTime_5.MinimumWidth = 6;
-            this.dTime_5.Name = "dTime_5";
-            this.dTime_5.Width = 125;
-            // 
-            // status_5
-            // 
-            this.status_5.DataPropertyName = "status";
-            this.status_5.HeaderText = "Trạng thái";
-            this.status_5.MinimumWidth = 6;
-            this.status_5.Name = "status_5";
-            this.status_5.Visible = false;
-            this.status_5.Width = 125;
-            // 
-            // fTong_5
-            // 
-            this.fTong_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fTong_5.DataPropertyName = "fTortal";
-            this.fTong_5.HeaderText = "Thành tiền";
-            this.fTong_5.MinimumWidth = 6;
-            this.fTong_5.Name = "fTong_5";
-            // 
             // lab_ftongtien_tab4
             // 
             this.lab_ftongtien_tab4.AutoSize = true;
@@ -1038,6 +900,147 @@
             this.label15.Size = new System.Drawing.Size(120, 17);
             this.label15.TabIndex = 13;
             this.label15.Text = "Tổng sô hóa đơn:";
+            // 
+            // dataGridView_listBill_tab4
+            // 
+            this.dataGridView_listBill_tab4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_listBill_tab4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_5,
+            this.ban_5,
+            this.ten_5,
+            this.dTime_5,
+            this.status_5,
+            this.fTong_5});
+            this.dataGridView_listBill_tab4.Location = new System.Drawing.Point(4, 108);
+            this.dataGridView_listBill_tab4.Name = "dataGridView_listBill_tab4";
+            this.dataGridView_listBill_tab4.RowHeadersWidth = 51;
+            this.dataGridView_listBill_tab4.RowTemplate.Height = 24;
+            this.dataGridView_listBill_tab4.Size = new System.Drawing.Size(780, 235);
+            this.dataGridView_listBill_tab4.TabIndex = 12;
+            // 
+            // btn_thongke_tab4
+            // 
+            this.btn_thongke_tab4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thongke_tab4.ImageIndex = 4;
+            this.btn_thongke_tab4.ImageList = this.imageList1;
+            this.btn_thongke_tab4.Location = new System.Drawing.Point(683, 50);
+            this.btn_thongke_tab4.Name = "btn_thongke_tab4";
+            this.btn_thongke_tab4.Padding = new System.Windows.Forms.Padding(5);
+            this.btn_thongke_tab4.Size = new System.Drawing.Size(101, 35);
+            this.btn_thongke_tab4.TabIndex = 11;
+            this.btn_thongke_tab4.Text = "Thống kê";
+            this.btn_thongke_tab4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_thongke_tab4.UseVisualStyleBackColor = true;
+            this.btn_thongke_tab4.Click += new System.EventHandler(this.btn_thongke_tab4_Click);
+            // 
+            // comboBox_thongke_hoadon_tab4
+            // 
+            this.comboBox_thongke_hoadon_tab4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_thongke_hoadon_tab4.FormattingEnabled = true;
+            this.comboBox_thongke_hoadon_tab4.Items.AddRange(new object[] {
+            "Thống kê ngày hôm nay",
+            "Thống kê theo thời gian",
+            "Thống kế tất cả hóa đơn"});
+            this.comboBox_thongke_hoadon_tab4.Location = new System.Drawing.Point(4, 56);
+            this.comboBox_thongke_hoadon_tab4.Name = "comboBox_thongke_hoadon_tab4";
+            this.comboBox_thongke_hoadon_tab4.Size = new System.Drawing.Size(247, 24);
+            this.comboBox_thongke_hoadon_tab4.TabIndex = 10;
+            this.comboBox_thongke_hoadon_tab4.TextChanged += new System.EventHandler(this.comboBox_thongke_hoadon_tab4_TextChanged);
+            // 
+            // dateTimePicker_thongke_to1_tab4
+            // 
+            this.dateTimePicker_thongke_to1_tab4.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker_thongke_to1_tab4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_thongke_to1_tab4.Location = new System.Drawing.Point(497, 57);
+            this.dateTimePicker_thongke_to1_tab4.Name = "dateTimePicker_thongke_to1_tab4";
+            this.dateTimePicker_thongke_to1_tab4.Size = new System.Drawing.Size(122, 22);
+            this.dateTimePicker_thongke_to1_tab4.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(459, 62);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 17);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "đến";
+            // 
+            // dateTimePicker_thongke_to_tab4
+            // 
+            this.dateTimePicker_thongke_to_tab4.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker_thongke_to_tab4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_thongke_to_tab4.Location = new System.Drawing.Point(331, 57);
+            this.dateTimePicker_thongke_to_tab4.Name = "dateTimePicker_thongke_to_tab4";
+            this.dateTimePicker_thongke_to_tab4.Size = new System.Drawing.Size(122, 22);
+            this.dateTimePicker_thongke_to_tab4.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(300, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 17);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Từ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(249, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(243, 32);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Thống kê hóa đơn";
+            // 
+            // id_5
+            // 
+            this.id_5.DataPropertyName = "id";
+            this.id_5.HeaderText = "Mã";
+            this.id_5.MinimumWidth = 6;
+            this.id_5.Name = "id_5";
+            this.id_5.Width = 125;
+            // 
+            // ban_5
+            // 
+            this.ban_5.DataPropertyName = "table_id";
+            this.ban_5.HeaderText = "Bàn";
+            this.ban_5.MinimumWidth = 6;
+            this.ban_5.Name = "ban_5";
+            this.ban_5.Width = 70;
+            // 
+            // ten_5
+            // 
+            this.ten_5.DataPropertyName = "user_id";
+            this.ten_5.HeaderText = "Nhân viên lập HĐ";
+            this.ten_5.MinimumWidth = 6;
+            this.ten_5.Name = "ten_5";
+            this.ten_5.Width = 125;
+            // 
+            // dTime_5
+            // 
+            this.dTime_5.DataPropertyName = "dTime";
+            this.dTime_5.HeaderText = "Ngày lập HĐ";
+            this.dTime_5.MinimumWidth = 6;
+            this.dTime_5.Name = "dTime_5";
+            this.dTime_5.Width = 180;
+            // 
+            // status_5
+            // 
+            this.status_5.DataPropertyName = "status";
+            this.status_5.HeaderText = "Trạng thái";
+            this.status_5.MinimumWidth = 6;
+            this.status_5.Name = "status_5";
+            this.status_5.Visible = false;
+            this.status_5.Width = 125;
+            // 
+            // fTong_5
+            // 
+            this.fTong_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fTong_5.DataPropertyName = "fTortal";
+            this.fTong_5.HeaderText = "Thành tiền";
+            this.fTong_5.MinimumWidth = 6;
+            this.fTong_5.Name = "fTong_5";
             // 
             // fManage
             // 
@@ -1141,12 +1144,6 @@
         private System.Windows.Forms.Label lab_fTongHD_tab4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridView_listBill_tab4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ban_5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ten_5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dTime_5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status_5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fTong_5;
         private System.Windows.Forms.Button btn_thongke_tab4;
         private System.Windows.Forms.ComboBox comboBox_thongke_hoadon_tab4;
         private System.Windows.Forms.DateTimePicker dateTimePicker_thongke_to1_tab4;
@@ -1154,5 +1151,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_thongke_to_tab4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ban_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTime_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fTong_5;
     }
 }

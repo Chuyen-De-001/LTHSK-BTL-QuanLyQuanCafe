@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LTHSK_BTL_QuanLyQuanCafeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LTHSK_BTL_QuanLyQuanCafeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LTHSK_BTL_QuanLyQuanCafe.Properties.Settings.GlobalReference.Default.LTHSK_BTL_QuanLyQuanCafeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewRepostBillTableAdapter" GeneratorDataComponentClassName="viewRepostBillTableAdapter" Name="viewRepostBill" UserDataComponentName="viewRepostBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LTHSK_BTL_QuanLyQuanCafeConnectionString (Settings)" DbObjectName="[LTHSK-BTL-QuanLyQuanCafe].dbo.viewRepostBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, sName, sHoten, dThoigianthanhtoan, sTendouong, fDongia, iSoluong, bill_id, fToongtien FROM dbo.viewRepostBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="sHoten" DataSetColumn="sHoten" />
+              <Mapping SourceColumn="dThoigianthanhtoan" DataSetColumn="dThoigianthanhtoan" />
+              <Mapping SourceColumn="sTendouong" DataSetColumn="sTendouong" />
+              <Mapping SourceColumn="fDongia" DataSetColumn="fDongia" />
+              <Mapping SourceColumn="iSoluong" DataSetColumn="iSoluong" />
+              <Mapping SourceColumn="bill_id" DataSetColumn="bill_id" />
+              <Mapping SourceColumn="fToongtien" DataSetColumn="fToongtien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="viewRepostBill" msprop:Generator_TableClassName="viewRepostBillDataTable" msprop:Generator_TableVarName="tableviewRepostBill" msprop:Generator_TablePropName="viewRepostBill" msprop:Generator_RowDeletingName="viewRepostBillRowDeleting" msprop:Generator_RowChangingName="viewRepostBillRowChanging" msprop:Generator_RowEvHandlerName="viewRepostBillRowChangeEventHandler" msprop:Generator_RowDeletedName="viewRepostBillRowDeleted" msprop:Generator_UserTableName="viewRepostBill" msprop:Generator_RowChangedName="viewRepostBillRowChanged" msprop:Generator_RowEvArgName="viewRepostBillRowChangeEvent" msprop:Generator_RowClassName="viewRepostBillRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="sName" msprop:Generator_ColumnVarNameInTable="columnsName" msprop:Generator_ColumnPropNameInRow="sName" msprop:Generator_ColumnPropNameInTable="sNameColumn" msprop:Generator_UserColumnName="sName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sHoten" msprop:Generator_ColumnVarNameInTable="columnsHoten" msprop:Generator_ColumnPropNameInRow="sHoten" msprop:Generator_ColumnPropNameInTable="sHotenColumn" msprop:Generator_UserColumnName="sHoten" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dThoigianthanhtoan" msprop:Generator_ColumnVarNameInTable="columndThoigianthanhtoan" msprop:Generator_ColumnPropNameInRow="dThoigianthanhtoan" msprop:Generator_ColumnPropNameInTable="dThoigianthanhtoanColumn" msprop:Generator_UserColumnName="dThoigianthanhtoan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sTendouong" msprop:Generator_ColumnVarNameInTable="columnsTendouong" msprop:Generator_ColumnPropNameInRow="sTendouong" msprop:Generator_ColumnPropNameInTable="sTendouongColumn" msprop:Generator_UserColumnName="sTendouong" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fDongia" msprop:Generator_ColumnVarNameInTable="columnfDongia" msprop:Generator_ColumnPropNameInRow="fDongia" msprop:Generator_ColumnPropNameInTable="fDongiaColumn" msprop:Generator_UserColumnName="fDongia" type="xs:double" minOccurs="0" />
+              <xs:element name="iSoluong" msprop:Generator_ColumnVarNameInTable="columniSoluong" msprop:Generator_ColumnPropNameInRow="iSoluong" msprop:Generator_ColumnPropNameInTable="iSoluongColumn" msprop:Generator_UserColumnName="iSoluong" type="xs:int" minOccurs="0" />
+              <xs:element name="bill_id" msprop:Generator_ColumnVarNameInTable="columnbill_id" msprop:Generator_ColumnPropNameInRow="bill_id" msprop:Generator_ColumnPropNameInTable="bill_idColumn" msprop:Generator_UserColumnName="bill_id" type="xs:int" />
+              <xs:element name="fToongtien" msprop:Generator_ColumnVarNameInTable="columnfToongtien" msprop:Generator_ColumnPropNameInRow="fToongtien" msprop:Generator_ColumnPropNameInTable="fToongtienColumn" msprop:Generator_UserColumnName="fToongtien" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
