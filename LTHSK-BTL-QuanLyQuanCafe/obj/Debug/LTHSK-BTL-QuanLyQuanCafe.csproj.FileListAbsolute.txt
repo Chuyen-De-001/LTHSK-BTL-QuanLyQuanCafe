@@ -1,0 +1,12 @@
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\bin\Debug\LTHSK-BTL-QuanLyQuanCafe.exe.config
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\bin\Debug\LTHSK-BTL-QuanLyQuanCafe.exe
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\bin\Debug\LTHSK-BTL-QuanLyQuanCafe.pdb
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK-BTL-QuanLyQuanCafe.csprojAssemblyReference.cache
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK_BTL_QuanLyQuanCafe.Login.resources
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK_BTL_QuanLyQuanCafe.Properties.Resources.resources
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK-BTL-QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK-BTL-QuanLyQuanCafe.exe
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK-BTL-QuanLyQuanCafe.pdb
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK_BTL_QuanLyQuanCafe.Main.resources
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK_BTL_QuanLyQuanCafe.fUser.resources
+D:\CODE\C#\LTHSK-BTL-QuanLyQuanCafe\LTHSK-BTL-QuanLyQuanCafe\obj\Debug\LTHSK_BTL_QuanLyQuanCafe.fManage.resources
