@@ -374,5 +374,36 @@ namespace LTHSK_BTL_QuanLyQuanCafe
 
             
         }
+
+        private void btn_report_tab4_Click(object sender, EventArgs e)
+        {
+            int status = 0;
+            if (comboBox_thongke_hoadon_tab4.SelectedItem.ToString() == "Thống kê theo thời gian")
+            {
+                status = 1;
+            }
+            else if (comboBox_thongke_hoadon_tab4.SelectedItem.ToString() == "Thống kê ngày hôm nay")
+            {
+                status = 2;
+            }
+            Reports.fReport fReport = new Reports.fReport(null,status.ToString(), new Entity.Bill().convertime(dateTimePicker_thongke_to_tab4.Value.ToString()), new Entity.Bill().convertime(dateTimePicker_thongke_to1_tab4.Value.ToString()));
+            fReport.Show();
+
+        }
+
+        private void btn_refesh_Click(object sender, EventArgs e)
+        {
+            Load_tabNhanVien();
+        }
+
+        private void btn_refesh_tab21_Click(object sender, EventArgs e)
+        {
+            Load_tabMenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Load_tabtypeDrink();
+        }
     }
 }

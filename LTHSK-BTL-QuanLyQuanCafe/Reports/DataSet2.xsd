@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LTHSK_BTL_QuanLyQuanCafeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LTHSK_BTL_QuanLyQuanCafeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LTHSK_BTL_QuanLyQuanCafe.Properties.Settings.GlobalReference.Default.LTHSK_BTL_QuanLyQuanCafeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewtblBillTableAdapter" GeneratorDataComponentClassName="viewtblBillTableAdapter" Name="viewtblBill" UserDataComponentName="viewtblBillTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LTHSK_BTL_QuanLyQuanCafeConnectionString (Settings)" DbObjectName="[LTHSK-BTL-QuanLyQuanCafe].dbo.viewtblBill" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT iId, sName, sHoten, dThoigianthanhtoan, sTrangthai, fToongtien FROM dbo.viewtblBill</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iId" DataSetColumn="iId" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="sHoten" DataSetColumn="sHoten" />
+              <Mapping SourceColumn="dThoigianthanhtoan" DataSetColumn="dThoigianthanhtoan" />
+              <Mapping SourceColumn="sTrangthai" DataSetColumn="sTrangthai" />
+              <Mapping SourceColumn="fToongtien" DataSetColumn="fToongtien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="viewtblBill" msprop:Generator_TableClassName="viewtblBillDataTable" msprop:Generator_TableVarName="tableviewtblBill" msprop:Generator_TablePropName="viewtblBill" msprop:Generator_RowDeletingName="viewtblBillRowDeleting" msprop:Generator_RowChangingName="viewtblBillRowChanging" msprop:Generator_RowEvHandlerName="viewtblBillRowChangeEventHandler" msprop:Generator_RowDeletedName="viewtblBillRowDeleted" msprop:Generator_UserTableName="viewtblBill" msprop:Generator_RowChangedName="viewtblBillRowChanged" msprop:Generator_RowEvArgName="viewtblBillRowChangeEvent" msprop:Generator_RowClassName="viewtblBillRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iId" msprop:Generator_ColumnVarNameInTable="columniId" msprop:Generator_ColumnPropNameInRow="iId" msprop:Generator_ColumnPropNameInTable="iIdColumn" msprop:Generator_UserColumnName="iId" type="xs:int" />
+              <xs:element name="sName" msprop:Generator_ColumnVarNameInTable="columnsName" msprop:Generator_ColumnPropNameInRow="sName" msprop:Generator_ColumnPropNameInTable="sNameColumn" msprop:Generator_UserColumnName="sName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sHoten" msprop:Generator_ColumnVarNameInTable="columnsHoten" msprop:Generator_ColumnPropNameInRow="sHoten" msprop:Generator_ColumnPropNameInTable="sHotenColumn" msprop:Generator_UserColumnName="sHoten" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dThoigianthanhtoan" msprop:Generator_ColumnVarNameInTable="columndThoigianthanhtoan" msprop:Generator_ColumnPropNameInRow="dThoigianthanhtoan" msprop:Generator_ColumnPropNameInTable="dThoigianthanhtoanColumn" msprop:Generator_UserColumnName="dThoigianthanhtoan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sTrangthai" msprop:Generator_ColumnVarNameInTable="columnsTrangthai" msprop:Generator_ColumnPropNameInRow="sTrangthai" msprop:Generator_ColumnPropNameInTable="sTrangthaiColumn" msprop:Generator_UserColumnName="sTrangthai" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fToongtien" msprop:Generator_ColumnVarNameInTable="columnfToongtien" msprop:Generator_ColumnPropNameInRow="fToongtien" msprop:Generator_ColumnPropNameInTable="fToongtienColumn" msprop:Generator_UserColumnName="fToongtien" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:viewtblBill" />
+      <xs:field xpath="mstns:iId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

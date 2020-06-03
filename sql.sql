@@ -224,3 +224,5 @@ exec removeTable 19
 
 select * from dbo.viewRepostBill where bill_id = 4
 
+select * from tblUser where DATEDIFF(year,dNgaysinh,GETDATE())> 10
+

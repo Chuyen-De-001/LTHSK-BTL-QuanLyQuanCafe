@@ -32,13 +32,19 @@ namespace LTHSK_BTL_QuanLyQuanCafe
             if (IdUser > 0)
             {
                 Main main = new Main(IdUser);
+                main.FormClosing += new FormClosingEventHandler(this.fMain_FormClosing);
                 main.Show();
-
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void fMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
         }
 
         private void Login_Load(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace LTHSK_BTL_QuanLyQuanCafe.Entity
         {
 
             string[] listDate = date.Split('/');
-
+            //m/d/y
             return listDate[1] + "/" + listDate[0] + "/" + listDate[2].Substring(0, 4);
         }
     }

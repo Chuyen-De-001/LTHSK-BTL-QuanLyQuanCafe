@@ -99,6 +99,12 @@
             this.lab_fTongHD_tab4 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridView_listBill_tab4 = new System.Windows.Forms.DataGridView();
+            this.id_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ban_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTime_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fTong_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_thongke_tab4 = new System.Windows.Forms.Button();
             this.comboBox_thongke_hoadon_tab4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker_thongke_to1_tab4 = new System.Windows.Forms.DateTimePicker();
@@ -106,12 +112,7 @@
             this.dateTimePicker_thongke_to_tab4 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.id_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ban_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dTime_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fTong_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_report_tab4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab1_Nhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tab1_dtgirldview_dsNv)).BeginInit();
@@ -274,6 +275,7 @@
             this.btn_refesh.TabIndex = 11;
             this.btn_refesh.Text = "Refesh";
             this.btn_refesh.UseVisualStyleBackColor = true;
+            this.btn_refesh.Click += new System.EventHandler(this.btn_refesh_Click);
             // 
             // comboBox1
             // 
@@ -531,7 +533,7 @@
             this.btn_refesh_tab21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_refesh_tab21.ImageIndex = 3;
             this.btn_refesh_tab21.ImageList = this.imageList1;
-            this.btn_refesh_tab21.Location = new System.Drawing.Point(277, 18);
+            this.btn_refesh_tab21.Location = new System.Drawing.Point(379, 21);
             this.btn_refesh_tab21.Name = "btn_refesh_tab21";
             this.btn_refesh_tab21.Padding = new System.Windows.Forms.Padding(10);
             this.btn_refesh_tab21.Size = new System.Drawing.Size(93, 60);
@@ -539,6 +541,7 @@
             this.btn_refesh_tab21.Text = "Làm lại";
             this.btn_refesh_tab21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_refesh_tab21.UseVisualStyleBackColor = true;
+            this.btn_refesh_tab21.Click += new System.EventHandler(this.btn_refesh_tab21_Click);
             // 
             // btn_sua_tab21
             // 
@@ -703,6 +706,7 @@
             this.button1.Text = "Làm lại";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -843,6 +847,7 @@
             // 
             // tab_bill
             // 
+            this.tab_bill.Controls.Add(this.btn_report_tab4);
             this.tab_bill.Controls.Add(this.lab_ftongtien_tab4);
             this.tab_bill.Controls.Add(this.ftongtien_5đss);
             this.tab_bill.Controls.Add(this.lab_fTongHD_tab4);
@@ -867,7 +872,7 @@
             this.lab_ftongtien_tab4.AutoSize = true;
             this.lab_ftongtien_tab4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_ftongtien_tab4.ForeColor = System.Drawing.Color.Black;
-            this.lab_ftongtien_tab4.Location = new System.Drawing.Point(610, 375);
+            this.lab_ftongtien_tab4.Location = new System.Drawing.Point(469, 374);
             this.lab_ftongtien_tab4.Name = "lab_ftongtien_tab4";
             this.lab_ftongtien_tab4.Size = new System.Drawing.Size(77, 17);
             this.lab_ftongtien_tab4.TabIndex = 16;
@@ -876,7 +881,7 @@
             // ftongtien_5đss
             // 
             this.ftongtien_5đss.AutoSize = true;
-            this.ftongtien_5đss.Location = new System.Drawing.Point(504, 374);
+            this.ftongtien_5đss.Location = new System.Drawing.Point(363, 373);
             this.ftongtien_5đss.Name = "ftongtien_5đss";
             this.ftongtien_5đss.Size = new System.Drawing.Size(72, 17);
             this.ftongtien_5đss.TabIndex = 15;
@@ -886,7 +891,7 @@
             // 
             this.lab_fTongHD_tab4.AutoSize = true;
             this.lab_fTongHD_tab4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_fTongHD_tab4.Location = new System.Drawing.Point(197, 374);
+            this.lab_fTongHD_tab4.Location = new System.Drawing.Point(140, 374);
             this.lab_fTongHD_tab4.Name = "lab_fTongHD_tab4";
             this.lab_fTongHD_tab4.Size = new System.Drawing.Size(53, 17);
             this.lab_fTongHD_tab4.TabIndex = 14;
@@ -895,7 +900,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(70, 373);
+            this.label15.Location = new System.Drawing.Point(13, 373);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(120, 17);
             this.label15.TabIndex = 13;
@@ -917,6 +922,55 @@
             this.dataGridView_listBill_tab4.RowTemplate.Height = 24;
             this.dataGridView_listBill_tab4.Size = new System.Drawing.Size(780, 235);
             this.dataGridView_listBill_tab4.TabIndex = 12;
+            // 
+            // id_5
+            // 
+            this.id_5.DataPropertyName = "id";
+            this.id_5.HeaderText = "Mã";
+            this.id_5.MinimumWidth = 6;
+            this.id_5.Name = "id_5";
+            this.id_5.Width = 125;
+            // 
+            // ban_5
+            // 
+            this.ban_5.DataPropertyName = "table_id";
+            this.ban_5.HeaderText = "Bàn";
+            this.ban_5.MinimumWidth = 6;
+            this.ban_5.Name = "ban_5";
+            this.ban_5.Width = 70;
+            // 
+            // ten_5
+            // 
+            this.ten_5.DataPropertyName = "user_id";
+            this.ten_5.HeaderText = "Nhân viên lập HĐ";
+            this.ten_5.MinimumWidth = 6;
+            this.ten_5.Name = "ten_5";
+            this.ten_5.Width = 125;
+            // 
+            // dTime_5
+            // 
+            this.dTime_5.DataPropertyName = "dTime";
+            this.dTime_5.HeaderText = "Ngày lập HĐ";
+            this.dTime_5.MinimumWidth = 6;
+            this.dTime_5.Name = "dTime_5";
+            this.dTime_5.Width = 180;
+            // 
+            // status_5
+            // 
+            this.status_5.DataPropertyName = "status";
+            this.status_5.HeaderText = "Trạng thái";
+            this.status_5.MinimumWidth = 6;
+            this.status_5.Name = "status_5";
+            this.status_5.Visible = false;
+            this.status_5.Width = 125;
+            // 
+            // fTong_5
+            // 
+            this.fTong_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fTong_5.DataPropertyName = "fTortal";
+            this.fTong_5.HeaderText = "Thành tiền";
+            this.fTong_5.MinimumWidth = 6;
+            this.fTong_5.Name = "fTong_5";
             // 
             // btn_thongke_tab4
             // 
@@ -993,54 +1047,20 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Thống kê hóa đơn";
             // 
-            // id_5
+            // btn_report_tab4
             // 
-            this.id_5.DataPropertyName = "id";
-            this.id_5.HeaderText = "Mã";
-            this.id_5.MinimumWidth = 6;
-            this.id_5.Name = "id_5";
-            this.id_5.Width = 125;
-            // 
-            // ban_5
-            // 
-            this.ban_5.DataPropertyName = "table_id";
-            this.ban_5.HeaderText = "Bàn";
-            this.ban_5.MinimumWidth = 6;
-            this.ban_5.Name = "ban_5";
-            this.ban_5.Width = 70;
-            // 
-            // ten_5
-            // 
-            this.ten_5.DataPropertyName = "user_id";
-            this.ten_5.HeaderText = "Nhân viên lập HĐ";
-            this.ten_5.MinimumWidth = 6;
-            this.ten_5.Name = "ten_5";
-            this.ten_5.Width = 125;
-            // 
-            // dTime_5
-            // 
-            this.dTime_5.DataPropertyName = "dTime";
-            this.dTime_5.HeaderText = "Ngày lập HĐ";
-            this.dTime_5.MinimumWidth = 6;
-            this.dTime_5.Name = "dTime_5";
-            this.dTime_5.Width = 180;
-            // 
-            // status_5
-            // 
-            this.status_5.DataPropertyName = "status";
-            this.status_5.HeaderText = "Trạng thái";
-            this.status_5.MinimumWidth = 6;
-            this.status_5.Name = "status_5";
-            this.status_5.Visible = false;
-            this.status_5.Width = 125;
-            // 
-            // fTong_5
-            // 
-            this.fTong_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fTong_5.DataPropertyName = "fTortal";
-            this.fTong_5.HeaderText = "Thành tiền";
-            this.fTong_5.MinimumWidth = 6;
-            this.fTong_5.Name = "fTong_5";
+            this.btn_report_tab4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_report_tab4.ImageIndex = 4;
+            this.btn_report_tab4.ImageList = this.imageList1;
+            this.btn_report_tab4.Location = new System.Drawing.Point(683, 360);
+            this.btn_report_tab4.Name = "btn_report_tab4";
+            this.btn_report_tab4.Padding = new System.Windows.Forms.Padding(5);
+            this.btn_report_tab4.Size = new System.Drawing.Size(99, 46);
+            this.btn_report_tab4.TabIndex = 17;
+            this.btn_report_tab4.Text = "Báo cáo";
+            this.btn_report_tab4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_report_tab4.UseVisualStyleBackColor = true;
+            this.btn_report_tab4.Click += new System.EventHandler(this.btn_report_tab4_Click);
             // 
             // fManage
             // 
@@ -1157,5 +1177,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dTime_5;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_5;
         private System.Windows.Forms.DataGridViewTextBoxColumn fTong_5;
+        private System.Windows.Forms.Button btn_report_tab4;
     }
 }

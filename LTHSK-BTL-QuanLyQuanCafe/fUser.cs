@@ -15,6 +15,7 @@ namespace LTHSK_BTL_QuanLyQuanCafe
         String rAction = "";
         Functions functions = new Functions();
         Bus.UserBus userBus = new Bus.UserBus();
+        
         Entity.User user = new Entity.User();
         public fUser()
         {
@@ -71,7 +72,7 @@ namespace LTHSK_BTL_QuanLyQuanCafe
             txt_diachi.Text = user.sDiachi;
             txt_hoten.Text = user.sHoten;
             txt_matkhau.Text = user.sPassword;
-            dateTimePicker1.Text = user.dNgaysinh;
+            dateTimePicker1.Text = new Entity.User().converdate(user.dNgaysinh);
             txt_sdt.Text = user.iSdt;
             txt_user.Text = user.sUsername;
             if (String.Compare(user.sGioitinh, "Nam", true) == 0)

@@ -14,9 +14,8 @@ namespace LTHSK_BTL_QuanLyQuanCafe.Bus
         Data.ConnecString conn = new Data.ConnecString();
         public int doLogin(string user, string pass)
         {
-            DataTable dt = new DataTable();
             string sql = "Select * from tblUser where sUsername like '" + user + "' and sPassword like '" + pass + "'";
-            dt = conn.getTable(sql);
+            DataTable dt = conn.getTable(sql);
             if(dt.Rows.Count > 0)
             {
                 return int.Parse(dt.Rows[0]["iId"].ToString());
